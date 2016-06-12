@@ -261,8 +261,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/24/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2016/06/12/emacs常用快捷键_20160608/" itemprop="url">
+                  未命名
                 </a>
               
             
@@ -275,8 +275,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-24T17:40:16+08:00" content="2016-05-24">
-              2016-05-24
+            <time itemprop="dateCreated" datetime="2016-06-12T15:58:57+08:00" content="2016-06-12">
+              2016-06-12
             </time>
           </span>
 
@@ -305,15 +305,175 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>emacs常用快捷键</title>
+<!-- 2016-06-12 Sun 15:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="generator" content="Org-mode">
+<meta name="author" content="mono">
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">emacs常用快捷键</h1>
+<div class="org-src-container">
+
+<pre class="src src-js">&lt;script&gt;
+    function editAtGithub(isRaw){
+	var url_parts = document.location.pathname.split('/');
+	var postname = url_parts[url_parts.length - 2];
+	if(url_parts.length == 3){ // is a page(wiki about etc)
+	    postname = postname + '/index.org';
+	}else{
+	    postname = '_posts/' + postname + '.org';
+	}
+	var url = 'https://github.com/CodeFalling/codefalling.com/tree/source/source/' + postname;
+	if(isRaw)
+	    url = 'https://raw.githubusercontent.com/CodeFalling/codefalling.com/source/source/' + postname;
+	window.open(url);
+    }
+&lt;/script&gt;
+</pre>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-11-15 Sun 17:00&gt;</span></span></p>
+<p class="author">Author: mono</p>
+<p class="date">Created: 2016-06-12 Sun 15:58</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
+</div>
+</body>
+</html>
 
           
         
@@ -363,8 +523,8 @@
             
               
                 
-                <a class="post-title-link" href="/2015/11/15/test_article/" itemprop="url">
-                  Hello,orgmode
+                <a class="post-title-link" href="/2015/11/15/emacs常用快捷键_20160608/" itemprop="url">
+                  emacs常用快捷键
                 </a>
               
             
@@ -391,8 +551,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/orgmode/" itemprop="url" rel="index">
-                    <span itemprop="name">orgmode</span>
+                  <a href="/categories/emacs/" itemprop="url" rel="index">
+                    <span itemprop="name">emacs</span>
                   </a>
                 </span>
 
@@ -426,77 +586,18 @@
       
         
           
-            <div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. Top level headline</a>
-<ul>
-<li><a href="#sec-1-1">1.1. Second level</a>
-<ul>
-<li><a href="#sec-1-1-1">1.1.1. 3rd level</a></li>
-<li><a href="#sec-1-1-2">1.1.2. 3rd level</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#sec-2">2. &#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#xFF0C;&#x4EB2;&#xFF01;</a></li>
-<li><a href="#sec-3">3. Another top level headline</a></li>
-</ul>
-</div>
+            
+
+<div class="org-src-container">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">editAtGithub</span>(<span class="params">isRaw</span>)</span>{</span><br><span class="line">	<span class="keyword">var</span> url_parts = <span class="built_in">document</span>.location.pathname.split(<span class="string">&apos;/&apos;</span>);</span><br><span class="line">	<span class="keyword">var</span> postname = url_parts[url_parts.length - <span class="number">2</span>];</span><br><span class="line">	<span class="keyword">if</span>(url_parts.length == <span class="number">3</span>){ <span class="comment">// is a page(wiki about etc)</span></span><br><span class="line">	    postname = postname + <span class="string">&apos;/index.org&apos;</span>;</span><br><span class="line">	}<span class="keyword">else</span>{</span><br><span class="line">	    postname = <span class="string">&apos;_posts/&apos;</span> + postname + <span class="string">&apos;.org&apos;</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">var</span> url = <span class="string">&apos;https://github.com/CodeFalling/codefalling.com/tree/source/source/&apos;</span> + postname;</span><br><span class="line">	<span class="keyword">if</span>(isRaw)</span><br><span class="line">	    url = <span class="string">&apos;https://raw.githubusercontent.com/CodeFalling/codefalling.com/source/source/&apos;</span> + postname;</span><br><span class="line">	<span class="built_in">window</span>.open(url);</span><br><span class="line">    }</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </div>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Top level headline</h2>
-<div class="outline-text-2" id="text-1">
-</div><div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Second level</h3>
-<div class="outline-text-3" id="text-1-1">
-</div><div id="outline-container-sec-1-1-1" class="outline-4">
-<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> 3rd level</h4>
-<div class="outline-text-4" id="text-1-1-1">
-<p>
-some text
-</p>
-</div>
-</div>
-<div id="outline-container-sec-1-1-2" class="outline-4">
-<h4 id="sec-1-1-2"><span class="section-number-4">1.1.2</span> 3rd level</h4>
-<div class="outline-text-4" id="text-1-1-2">
-<p>
-more text
-</p>
-</div>
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> &#x4EC0;&#x4E48;&#x60C5;&#x51B5;&#xFF0C;&#x4EB2;&#xFF01;</h2>
-</div>
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Another top level headline</h2>
-<div class="outline-text-2" id="text-3">
-<div class="cnblogs_Highlighter">
-<pre class="brush:cpp">
-int main()
-{
-  return 0;
-}
-</pre>
-</div>
-
-<p>
-Angles are written as Greek letters &#x3B1;, &#x3B2; and &#x3B3;. The mass if
-the sun is M<sub>sun</sub> = 1.989 x 10<sup>30</sup> kg. The radius of the sun is R<sub>sun</sub> =
-6.96 x 10<sup>8</sup> m. If \(a^2=b\) and \(b=2\), then the solution must be either
-\(a=+\sqrt{2}\) or \(a=-\sqrt{2}\).
-</p>
-\begin{equation}
-x=\sqrt{b}
-\end{equation}
-</div>
-</div>
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-11-15 Sun 17:00&gt;</span></span></p>
+<p class="author">Author: mono</p>
+<p class="date">Created: 2016-06-12 Sun 15:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
 
           
         
@@ -583,7 +684,7 @@ x=\sqrt{b}
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -772,6 +873,26 @@ x=\sqrt{b}
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
 

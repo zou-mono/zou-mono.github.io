@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="emacs," />
 
 
 
@@ -92,15 +92,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="mono's notes">
-<meta property="og:url" content="http://yoursite.com/tags/orgmode/index.html">
+<meta name="description" content="&amp;lt;script&amp;gt;    function editAtGithub(isRaw){	var url_parts = document.location.pathname.split(&amp;apos;/&amp;apos;);	var postname = url_parts[url_parts.length - 2];	if(url_parts.length == 3){ // is a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="emacs常用快捷键">
+<meta property="og:url" content="http://yoursite.com/2015/11/15/emacs常用快捷键_20160608/index.html">
 <meta property="og:site_name" content="mono's notes">
-<meta property="og:description">
+<meta property="og:description" content="&amp;lt;script&amp;gt;    function editAtGithub(isRaw){	var url_parts = document.location.pathname.split(&amp;apos;/&amp;apos;);	var postname = url_parts[url_parts.length - 2];	if(url_parts.length == 3){ // is a">
+<meta property="og:updated_time" content="2016-06-12T07:58:50.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mono's notes">
-<meta name="twitter:description">
+<meta name="twitter:title" content="emacs常用快捷键">
+<meta name="twitter:description" content="&amp;lt;script&amp;gt;    function editAtGithub(isRaw){	var url_parts = document.location.pathname.split(&amp;apos;/&amp;apos;);	var postname = url_parts[url_parts.length - 2];	if(url_parts.length == 3){ // is a">
 
 
 
@@ -118,7 +119,7 @@
   };
 </script>
 
-  <title> 标签: orgmode | mono's notes </title>
+  <title> emacs常用快捷键 | mono's notes </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -139,7 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -237,46 +238,151 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        orgmode
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                emacs常用快捷键
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-15T17:00:00+08:00" content="2015-11-15">
+              2015-11-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/emacs/" itemprop="url" rel="index">
+                    <span itemprop="name">emacs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
+      
         
-            <a class="post-title-link" href="/2015/11/15/test_article/" itemprop="url">
-              
-                <span itemprop="name">Hello,orgmode</span>
-              
-            </a>
+
+<div class="org-src-container">
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">editAtGithub</span>(<span class="params">isRaw</span>)</span>{</span><br><span class="line">	<span class="keyword">var</span> url_parts = <span class="built_in">document</span>.location.pathname.split(<span class="string">&apos;/&apos;</span>);</span><br><span class="line">	<span class="keyword">var</span> postname = url_parts[url_parts.length - <span class="number">2</span>];</span><br><span class="line">	<span class="keyword">if</span>(url_parts.length == <span class="number">3</span>){ <span class="comment">// is a page(wiki about etc)</span></span><br><span class="line">	    postname = postname + <span class="string">&apos;/index.org&apos;</span>;</span><br><span class="line">	}<span class="keyword">else</span>{</span><br><span class="line">	    postname = <span class="string">&apos;_posts/&apos;</span> + postname + <span class="string">&apos;.org&apos;</span>;</span><br><span class="line">	}</span><br><span class="line">	<span class="keyword">var</span> url = <span class="string">&apos;https://github.com/CodeFalling/codefalling.com/tree/source/source/&apos;</span> + postname;</span><br><span class="line">	<span class="keyword">if</span>(isRaw)</span><br><span class="line">	    url = <span class="string">&apos;https://raw.githubusercontent.com/CodeFalling/codefalling.com/source/source/&apos;</span> + postname;</span><br><span class="line">	<span class="built_in">window</span>.open(url);</span><br><span class="line">    }</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+</div>
+
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2015-11-15 Sun 17:00&gt;</span></span></p>
+<p class="author">Author: mono</p>
+<p class="date">Created: 2016-06-12 Sun 15:59</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs</a> 24.5.1 (<a href="http://orgmode.org" target="_blank" rel="external">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer" target="_blank" rel="external">Validate</a></p>
+
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+      
+    </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2015-11-15T17:00:00+08:00"
-              content="2015-11-15" >
-          11-15
-        </time>
-      </div>
+    <div>
+      
+        
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/emacs/" rel="tag">#emacs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/06/12/emacs常用快捷键_20160608/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -284,6 +390,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -303,8 +413,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars3.githubusercontent.com/u/7379612?v=3&amp;s=400"
@@ -332,7 +451,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -399,6 +518,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -502,6 +632,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
@@ -521,6 +655,26 @@
   
   
   
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
 
   
 
