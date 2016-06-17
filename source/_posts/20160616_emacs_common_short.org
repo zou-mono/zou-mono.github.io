@@ -1,0 +1,30 @@
+#+TITLE:  emacs快捷键备忘录
+#+DATE: <2016-06-16 20:16:41>
+#+TAGS:emacs
+#+LAYOUT:post
+#+CATEGORIES:emacs
+#+OPTIONS: toc:nil
+#+STARTUP: indent
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei Mon}
+#+BIND: org-html-postamble "<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %a - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>"
+
+
+* 前言
+用emacs做为编辑器也有一段时间了，常用的快捷键也不少了，现在不比年轻时候记忆力好了，所以还是用备忘录记载下来，方便以后需要的时候能随时查看。
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+
+* 基本编辑
+主要包括基本文本编辑的常用快捷键。
+#+BEGIN_HTML 
+<span class="label label-warning">0.4.5</span> 
+#+END_HTML
+
+#+BEGIN_QUOTE
+因为在windows系统浸淫多年，很难更改剪切，复制，粘贴等常规文本编辑快捷键的使用习惯，因此在配置文件中使用了CUA-MODE,因此这些快捷键不包含在内。
+#+END_QUOTE
+
+
+

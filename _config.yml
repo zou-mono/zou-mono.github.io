@@ -86,3 +86,29 @@ avatar: https://avatars3.githubusercontent.com/u/7379612?v=3&amp;s=400
 # org-mode
 org:
   emacs: '/usr/local/bin/emacs'
+
+# Hexo-all-minifier
+html_minifier:
+  enable: true
+  exclude: 
+
+css_minifier:
+  enable: true
+  exclude: 
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude: 
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+    - '*.min.css'
