@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-12T07:58:57.215Z</updated>
+  <updated>2016-06-17T11:33:58.524Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,222 +16,17 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="http://yoursite.com/2016/06/12/emacs%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE_20160608/"/>
-    <id>http://yoursite.com/2016/06/12/emacs常用快捷键_20160608/</id>
-    <published>2016-06-12T07:58:57.219Z</published>
-    <updated>2016-06-12T07:58:57.215Z</updated>
+    <title>emacs快捷键备忘录</title>
+    <link href="http://yoursite.com/2016/06/16/20160616_emacs_common_short/"/>
+    <id>http://yoursite.com/2016/06/16/20160616_emacs_common_short/</id>
+    <published>2016-06-16T12:16:41.000Z</published>
+    <updated>2016-06-17T11:33:58.524Z</updated>
     
-    <content type="html">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; lang=&quot;en&quot; xml:lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;title&gt;emacs常用快捷键&lt;/title&gt;
-&lt;!-- 2016-06-12 Sun 15:58 --&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;
-&lt;meta name=&quot;generator&quot; content=&quot;Org-mode&quot;&gt;
-&lt;meta name=&quot;author&quot; content=&quot;mono&quot;&gt;
-&lt;style type=&quot;text/css&quot;&gt;
- &lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
-  .title  { text-align: center; }
-  .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
-    padding: 8pt;
-    font-family: monospace;
-    overflow: auto;
-    margin: 1.2em;
-  }
-  pre.src {
-    position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
-  }
-  pre.src:before {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
-    padding: 3px;
-    border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: &#39;sh&#39;; }
-  pre.src-bash:before  { content: &#39;sh&#39;; }
-  pre.src-emacs-lisp:before { content: &#39;Emacs Lisp&#39;; }
-  pre.src-R:before     { content: &#39;R&#39;; }
-  pre.src-perl:before  { content: &#39;Perl&#39;; }
-  pre.src-java:before  { content: &#39;Java&#39;; }
-  pre.src-sql:before   { content: &#39;SQL&#39;; }
-
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
-    padding: 10px;
-    border: 2px solid gray;
-    margin: 10px;
-    background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
-  /*]]&gt;*/--&gt;
-&lt;/style&gt;
-&lt;script type=&quot;text/javascript&quot;&gt;
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-&lt;!--/*--&gt;&lt;![CDATA[/*&gt;&lt;!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = &quot;code-highlighted&quot;;
-     elem.className   = &quot;code-highlighted&quot;;
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]&gt;*///--&gt;
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id=&quot;content&quot;&gt;
-&lt;h1 class=&quot;title&quot;&gt;emacs常用快捷键&lt;/h1&gt;
-&lt;div class=&quot;org-src-container&quot;&gt;
-
-&lt;pre class=&quot;src src-js&quot;&gt;&amp;lt;script&amp;gt;
-    function editAtGithub(isRaw){
-	var url_parts = document.location.pathname.split(&#39;/&#39;);
-	var postname = url_parts[url_parts.length - 2];
-	if(url_parts.length == 3){ // is a page(wiki about etc)
-	    postname = postname + &#39;/index.org&#39;;
-	}else{
-	    postname = &#39;_posts/&#39; + postname + &#39;.org&#39;;
-	}
-	var url = &#39;https://github.com/CodeFalling/codefalling.com/tree/source/source/&#39; + postname;
-	if(isRaw)
-	    url = &#39;https://raw.githubusercontent.com/CodeFalling/codefalling.com/source/source/&#39; + postname;
-	window.open(url);
-    }
-&amp;lt;/script&amp;gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&quot;postamble&quot; class=&quot;status&quot;&gt;
-&lt;p class=&quot;date&quot;&gt;Date: &lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;span class=&quot;timestamp&quot;&gt;&amp;lt;2015-11-15 Sun 17:00&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&quot;author&quot;&gt;Author: mono&lt;/p&gt;
-&lt;p class=&quot;date&quot;&gt;Created: 2016-06-12 Sun 15:58&lt;/p&gt;
-&lt;p class=&quot;creator&quot;&gt;&lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)&lt;/p&gt;
-&lt;p class=&quot;validation&quot;&gt;&lt;a href=&quot;http://validator.w3.org/check?uri=referer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Validate&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</content>
+    <content type="html">&lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; &amp;#x524D;&amp;#x8A00;&lt;/h2&gt;&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;&lt;p&gt;&amp;#x7528;emacs&amp;#x505A;&amp;#x4E3A;&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&amp;#x4E5F;&amp;#x6709;&amp;#x4E00;&amp;#x6BB5;&amp;#x65F6;&amp;#x95F4;&amp;#x4E86;&amp;#xFF0C;&amp;#x5E38;&amp;#x7528;&amp;#x7684;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x4E5F;&amp;#x4E0D;&amp;#x5C11;&amp;#x4E86;&amp;#xFF0C;&amp;#x73B0;&amp;#x5728;&amp;#x4E0D;&amp;#x6BD4;&amp;#x5E74;&amp;#x8F7B;&amp;#x65F6;&amp;#x5019;&amp;#x8BB0;&amp;#x5FC6;&amp;#x529B;&amp;#x597D;&amp;#x4E86;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x8FD8;&amp;#x662F;&amp;#x7528;&amp;#x5907;&amp;#x5FD8;&amp;#x5F55;&amp;#x8BB0;&amp;#x8F7D;&amp;#x4E0B;&amp;#x6765;&amp;#xFF0C;&amp;#x65B9;&amp;#x4FBF;&amp;#x4EE5;&amp;#x540E;&amp;#x9700;&amp;#x8981;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#x80FD;&amp;#x968F;&amp;#x65F6;&amp;#x67E5;&amp;#x770B;&amp;#x3002;&lt;/p&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;outline-container-sec-2&quot; class=&quot;outline-2&quot;&gt;&lt;h2 id=&quot;sec-2&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;2&lt;/span&gt; &amp;#x57FA;&amp;#x672C;&amp;#x7F16;&amp;#x8F91;&lt;/h2&gt;&lt;div class=&quot;outline-text-2&quot; id=&quot;text-2&quot;&gt;&lt;p&gt;&amp;#x4E3B;&amp;#x8981;&amp;#x5305;&amp;#x62EC;&amp;#x57FA;&amp;#x672C;&amp;#x6587;&amp;#x672C;&amp;#x7F16;&amp;#x8F91;&amp;#x7684;&amp;#x5E38;&amp;#x7528;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x3002;&lt;/p&gt;&lt;span class=&quot;label label-warning&quot;&gt;0.4.5&lt;/span&gt;&lt;blockquote&gt;&lt;p&gt;&amp;#x56E0;&amp;#x4E3A;&amp;#x5728;windows&amp;#x7CFB;&amp;#x7EDF;&amp;#x6D78;&amp;#x6DEB;&amp;#x591A;&amp;#x5E74;&amp;#xFF0C;&amp;#x5F88;&amp;#x96BE;&amp;#x66F4;&amp;#x6539;&amp;#x526A;&amp;#x5207;&amp;#xFF0C;&amp;#x590D;&amp;#x5236;&amp;#xFF0C;&amp;#x7C98;&amp;#x8D34;&amp;#x7B49;&amp;#x5E38;&amp;#x89C4;&amp;#x6587;&amp;#x672C;&amp;#x7F16;&amp;#x8F91;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x7684;&amp;#x4F7F;&amp;#x7528;&amp;#x4E60;&amp;#x60EF;&amp;#xFF0C;&amp;#x56E0;&amp;#x6B64;&amp;#x5728;&amp;#x914D;&amp;#x7F6E;&amp;#x6587;&amp;#x4EF6;&amp;#x4E2D;&amp;#x4F7F;&amp;#x7528;&amp;#x4E86;CUA-MODE,&amp;#x56E0;&amp;#x6B64;&amp;#x8FD9;&amp;#x4E9B;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x4E0D;&amp;#x5305;&amp;#x542B;&amp;#x5728;&amp;#x5185;&amp;#x3002;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;font-size:14px;padding:5px;line-height:20px;border:1px solid&quot;&gt;Copyright (c) 2016-2020 mono - Last Updated 2016-06-17 Fri 19:33.&lt;br&gt;Render by &lt;a href=&quot;https://github.com/CodeFalling/hexo-renderer-org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;hexo-renderer-org&lt;/a&gt; with &lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)&lt;/div&gt;</content>
     
     <summary type="html">
     
-      &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
-&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-stri
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>emacs常用快捷键</title>
-    <link href="http://yoursite.com/2015/11/15/emacs%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE_20160608/"/>
-    <id>http://yoursite.com/2015/11/15/emacs常用快捷键_20160608/</id>
-    <published>2015-11-15T09:00:00.000Z</published>
-    <updated>2016-06-12T07:58:50.755Z</updated>
-    
-    <content type="html">
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;editAtGithub&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;isRaw&lt;/span&gt;)&lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; url_parts = &lt;span class=&quot;built_in&quot;&gt;document&lt;/span&gt;.location.pathname.split(&lt;span class=&quot;string&quot;&gt;&amp;apos;/&amp;apos;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; postname = url_parts[url_parts.length - &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(url_parts.length == &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;){ &lt;span class=&quot;comment&quot;&gt;// is a page(wiki about etc)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    postname = postname + &lt;span class=&quot;string&quot;&gt;&amp;apos;/index.org&amp;apos;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	}&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;{&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    postname = &lt;span class=&quot;string&quot;&gt;&amp;apos;_posts/&amp;apos;&lt;/span&gt; + postname + &lt;span class=&quot;string&quot;&gt;&amp;apos;.org&amp;apos;&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; url = &lt;span class=&quot;string&quot;&gt;&amp;apos;https://github.com/CodeFalling/codefalling.com/tree/source/source/&amp;apos;&lt;/span&gt; + postname;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(isRaw)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	    url = &lt;span class=&quot;string&quot;&gt;&amp;apos;https://raw.githubusercontent.com/CodeFalling/codefalling.com/source/source/&amp;apos;&lt;/span&gt; + postname;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;	&lt;span class=&quot;built_in&quot;&gt;window&lt;/span&gt;.open(url);&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    }&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;&lt;span class=&quot;regexp&quot;&gt;/script&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/div&gt;
-
-&lt;p class=&quot;date&quot;&gt;Date: &lt;span class=&quot;timestamp-wrapper&quot;&gt;&lt;span class=&quot;timestamp&quot;&gt;&amp;lt;2015-11-15 Sun 17:00&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p class=&quot;author&quot;&gt;Author: mono&lt;/p&gt;
-&lt;p class=&quot;date&quot;&gt;Created: 2016-06-12 Sun 15:59&lt;/p&gt;
-&lt;p class=&quot;creator&quot;&gt;&lt;a href=&quot;http://www.gnu.org/software/emacs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Emacs&lt;/a&gt; 24.5.1 (&lt;a href=&quot;http://orgmode.org&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Org&lt;/a&gt; mode 8.2.10)&lt;/p&gt;
-&lt;p class=&quot;validation&quot;&gt;&lt;a href=&quot;http://validator.w3.org/check?uri=referer&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Validate&lt;/a&gt;&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      
-
-&lt;div class=&quot;org-src-container&quot;&gt;
-
-&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;script&amp;gt;&lt;/span&gt;&lt;br
+      &lt;div id=&quot;outline-container-sec-1&quot; class=&quot;outline-2&quot;&gt;&lt;h2 id=&quot;sec-1&quot;&gt;&lt;span class=&quot;section-number-2&quot;&gt;1&lt;/span&gt; &amp;#x524D;&amp;#x8A00;&lt;/h2&gt;&lt;div class=&quot;outline-text-2&quot; id=&quot;text-1&quot;&gt;&lt;p&gt;&amp;#x7528;emacs&amp;#x505A;&amp;#x4E3A;&amp;#x7F16;&amp;#x8F91;&amp;#x5668;&amp;#x4E5F;&amp;#x6709;&amp;#x4E00;&amp;#x6BB5;&amp;#x65F6;&amp;#x95F4;&amp;#x4E86;&amp;#xFF0C;&amp;#x5E38;&amp;#x7528;&amp;#x7684;&amp;#x5FEB;&amp;#x6377;&amp;#x952E;&amp;#x4E5F;&amp;#x4E0D;&amp;#x5C11;&amp;#x4E86;&amp;#xFF0C;&amp;#x73B0;&amp;#x5728;&amp;#x4E0D;&amp;#x6BD4;&amp;#x5E74;&amp;#x8F7B;&amp;#x65F6;&amp;#x5019;&amp;#x8BB0;&amp;#x5FC6;&amp;#x529B;&amp;#x597D;&amp;#x4E86;&amp;#xFF0C;&amp;#x6240;&amp;#x4EE5;&amp;#x8FD8;&amp;#x662F;&amp;#x7528;&amp;#x5907;&amp;#x5FD8;&amp;#x5F55;&amp;#x8BB0;&amp;#x8F7D;&amp;#x4E0B;&amp;#x6765;&amp;#xFF0C;&amp;#x65B9;&amp;#x4FBF;&amp;#x4EE5;&amp;#x540E;&amp;#x9700;&amp;#x8981;&amp;#x7684;&amp;#x65F6;&amp;#x5019;&amp;#x80FD;&amp;#x968F;&amp;#x65F6;&amp;#x67E5;&amp;#x770B;&amp;#x3002;&lt;/p&gt;
     
     </summary>
     
