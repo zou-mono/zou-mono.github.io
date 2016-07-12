@@ -4,27 +4,208 @@
 #+LAYOUT:post
 #+CATEGORIES:emacs
 #+OPTIONS: toc:nil
-#+STARTUP: indent
+#+STARTUP: indent align
 #+LATEX_HEADER: \usepackage{xeCJK}
 #+LATEX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei Mon}
 #+BIND: org-html-postamble "<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %a - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>"
 
 
 * 前言
-用emacs做为编辑器也有一段时间了，常用的快捷键也不少了，现在不比年轻时候记忆力好了，所以还是用备忘录记载下来，方便以后需要的时候能随时查看。
+用emacs做为编辑器也有一年多时间了，常用的快捷键也越积越多，现在不比年轻时候记忆力好了，所以还是用备忘录形式记载下来，方便以后需要的时候能随时查看。 =以下在版本>=24.5测试通过=
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
 
-* 基本编辑
-主要包括基本文本编辑的常用快捷键。
-#+BEGIN_HTML 
-<span class="label label-warning">0.4.5</span> 
-#+END_HTML
+{% alert info %}根据使用心得，快捷键太长的话很难记住，而且在某些mode下还会发生按键冲突，不如M-x配合自动补全快，所以两者需要配合使用{% endalert %}
 
-#+BEGIN_QUOTE
-因为在windows系统浸淫多年，很难更改剪切，复制，粘贴等常规文本编辑快捷键的使用习惯，因此在配置文件中使用了CUA-MODE,因此这些快捷键不包含在内。
-#+END_QUOTE
+* 基本功能
+
+| 功能                  | 快捷键  |
+| 打开/新建文件         | C-x C-f |
+| 保存文件              | C-s     |
+| 另存为                | C-x C-w |
+| 在当前光标处插入文件  | C-x i   |
+| 停止当前运行/输入命令 | C-g     |
+| 切换buffer            | C-x b   |
+| 显示已打开buffer列表  | C-x C-b |
+| 关闭当前buffer        | C-x k   |
+| 关闭emacs             | C-x C-c |
+
+* 窗口
+{% alert danger %}需开启winner-mode和window-numbering-mode{% endalert %}
+
+| 功能            | 快捷键       |
+| 切换至上一视图  | C-x <left>   |
+| 切换至下一视图  | C-x <right>  |
+| 水平分割frame   | C-x 2        |
+| 垂直分割frame   | C-x 3        |
+| 当前窗口最大化  | C-x 1        |
+| 关闭当前窗口    | C-x 0        |
+| 切换至第N号窗口 | M-N(N为数字) |
+
+* 目录和文件
+{% alert danger %}需开启dired-mode和Speedbar-mode{% endalert %}
+
+| 功能                                | 快捷键  |
+| 复制文件                            | C       |
+| 删除文件待定                        | d       |
+| 立即删除文件                        | D       |
+| 删除所有标记为d的文件               | x       |
+| 打开文件或目录                      | <RET>   |
+| 新建文件                            | C-x C-f |
+| 刷新目录树                          | g       |
+| 用*标记                             | m       |
+| 在另一个窗口打开文件并移动光标      | o       |
+| 重命名                              | R       |
+| 移除标记*                           | u       |
+| 显示文件内容                        | v       |
+| 压缩/解压缩文件                     | Z       |
+| 标记备份文件(文件名有~)等待删除     | ~       |
+| 标记自动保存文件(文件名有#)等待删除 | #       |
+| 标记所有文件夹                      | */      |
+| 移动光标至下一个用*或D标记的文件    | M-}     |
+| 移动光标至上一个用*或D标记的文件    | M-{     |
+| 新建文件夹                          | +       |
+| 移动光标至后一文件夹                | >       |
+| 移动光标至前一文件夹                | <       |
+| 切换排序模式(按文件名/日期)         | s       |
+| 打开/关闭speedbar                   | M-s     |
+| 刷新speedbar                        | M-r     |
+| 退出dired                           | q       |
+
+* 编辑
+主要涉及文本编辑等级的常用快捷键。
+
+{% alert danger %}需开启CUA-mode{% endalert %}
+
+ | 功能                     | 快捷键       |
+ |--------------------------+--------------|
+ | 全选                     | C-x h        |
+ | 剪切                     | C-x          |
+ | 复制                     | C-c          |
+ | 粘贴                     | C-v          |
+ | 撤销                     | C-z          |
+ | 删除光标所在字符         | DEL          |
+ | 删除从光标至行尾所有字符 | C-k          |
+ | 设置开始标记             | C-<SPC>或C-@ |
+ | 开始矩形区域选择         | C-<RET>      |
+ | 注释代码                 | M-;          |
+ | 行首                     | C-a          |
+ | 行尾                     | C-e          |
+ | 跳至到buffer开头         | M-<          |
+ | 跳至buffer末尾           | M->          |
 
 
 
+# #+BEGIN_QUOTE
+# 因为在windows系统浸淫多年，很难更改剪切，复制，粘贴等常规文本编辑快捷键的使用习惯，因此在配置文件中使用了CUA-MODE,因此这些快捷键不包含在内。
+# #+END_QUOTE
+
+# #+NAME: WOQU
+# #+BEGIN_SRC python
+# def getHtml(url):
+#     request = urllib2.Request(url)
+#     response = urllib2.urlopen(request)
+#     html = response.read()
+#     return html
+# #+END_SRC
+
+# #+begin_badge
+# women
+# #+end_badge
+
+# [[WOQU]]点我
+
+
+* 搜索/替换
+
+| 功能                               | 快捷键                   |
+| 向后增量搜索                       | C-s                      |
+| 向前增量搜索                       | C-r                      |
+| 回到搜索开始前的位置               | C-g                      |
+| 询问并替换                         | M-%                      |
+| 替换当前匹配                       | <SPC>或y                 |
+| 不替换当前匹配                     | <DEL>或n                 |
+| 仅仅替换当前匹配并退出             | .                        |
+| 替换并暂停                         | ,(按<SPC>或y继续)        |
+| 替换以下所有匹配                   | !                        |
+| 回到上一匹配位置                   | ^                        |
+| 退出替换                           | <RET>或q                 |
+| 使用正则向后搜索                   | <ESC> C-s                |
+| 使用正则向前搜索                   | <ESC> C-r                |
+| 使用正则搜索并替换                 | M-x query-replace-regexp |
+| 显示所有当前buffer正则匹配的行列表 | M-x occur                |
+
+* 正则表达式
+
+| 功能         | 快捷键                        |
+| 行首         | ^                             |
+| 行尾         | $                             |
+| 单个字符     | .                             |
+| 任意多个字符 | .*                            |
+| 单词开头     | \<                            |
+| 单词结尾     | \>                            |
+| 任意一个字符 | [](例如[a-z]表示所有小写字母) |
+
+* 帮助
+
+** 基础
+
+| 功能                           | 快捷键 |
+| 显示快捷键绑定的命令和帮助文档 | C-h k  |
+| 显示命令被绑定的快捷键         | C-h w  |
+| 显示函数帮助文档               | C-h f  |
+| 显示变量帮助文档               | C-h v  |
+| 显示当前buffer所有快捷键       | C-h b  |
+| 打开emacs简明教程              | C-h t  |
+| 打开当前buffer的帮助文档       | C-h m  |
+
+** info-mode
+
+| 功能                                | 快捷键           |
+| 打开info                            | C-h i            |
+| 退出info                            | q                |
+| 下一节点                            | n                |
+| 上一节点                            | p                |
+| 返回info根目录节点                  | d                |
+| 返回上一次访问节点                  | l                |
+| 撤销返回上一次访问节点              | r                |
+| 使用正则搜索当前文件(大小写不敏感)  | s                |
+| 使用正则搜索当前文件(大小写敏感)    | S                |
+| 使用增量搜索在多个info节点中搜索    | C-s              |
+| 搜索index节点并且自动跳转           | i                |
+| 搜索index节点并且匹配结果以列表显示 | I                |
+| 跳转至指定名称节点                  | g                |
+| 目录选择                            | m                |
+| 打开当前info文件的目录列表          | T                |
+| 跳转至当前info文件的Top节点         | <                |
+| 跳转至当前info文件的final节点       | >                |
+| 在所有info中搜索指令                | M-x info-apropos |
+
+* org-mode
+=版本>=8.3.4测试通过=
+
+** 基础
+
+| 快捷键                  | 功能      |
+| 对光标所在章节展开/折叠 | <Tab>     |
+| 展开/折叠所有章节       | S+<Tab>   |
+| 插入当前等级标题        | M-<RET>   |
+| 标题升级                | M-<left>  |
+| 标题降级                | M-<right> |
+
+** 表格
+| 快捷键                   | 功能                        |
+| 创建表格                 | C-c                         |
+| 切换下一单元格           | <Tab>                       |
+| 在当前列前插入一列       | M-S-<right>                 |
+| 删除当前列               | M-x org-table-delete-column |
+| 在当前列前插入一列       | M-x org-table-insert-column |
+| 删除当前行               | M-x org-table-delete-row    |
+| 在当前行前插入一行       | M-x org-table-insert-row    |
+| 移动到下一行，或新建一行 | C-m                         |
+| 将当前行往上/下移动      | M-<up>/M-<down>             |
+| 将当前行往左/右移动      | M-<left>/M-<right>          |
+| 编辑当前单元格           | C-c `                       |
+| 表格重新排列             | C-c C-c                     |
+| 表格排序                 | M-x org-table-sort-lines    |
