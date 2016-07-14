@@ -9,9 +9,9 @@
 #+LATEX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei Mon}
 #+BIND: org-html-postamble "<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %a - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>"
 
-
 * 前言
-用emacs做为编辑器也有一年多时间了，常用的快捷键也越积越多，现在不比年轻时候记忆力好了，所以还是用备忘录形式记载下来，方便以后需要的时候能随时查看。 =以下在版本>=24.5测试通过=
+用emacs做为编辑器也有一年多时间了，常用的快捷键也越积越多，现在不比年轻时候记忆力好了，所以还是用备忘录形式记载下来，方便以后需要的时候能随时查看。 {% label 以下在emacs版本=24.5测试通过 success %}
+
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
@@ -20,16 +20,18 @@
 
 * 基本功能
 
-| 功能                  | 快捷键  |
-| 打开/新建文件         | C-x C-f |
-| 保存文件              | C-s     |
-| 另存为                | C-x C-w |
-| 在当前光标处插入文件  | C-x i   |
-| 停止当前运行/输入命令 | C-g     |
-| 切换buffer            | C-x b   |
-| 显示已打开buffer列表  | C-x C-b |
-| 关闭当前buffer        | C-x k   |
-| 关闭emacs             | C-x C-c |
+| 功能                           | 快捷键                   |
+| 打开/新建文件                  | C-x C-f                  |
+| 保存文件                       | C-s                      |
+| 另存为                         | C-x C-w                  |
+| 在当前光标处插入文件           | C-x i                    |
+| 停止当前运行/输入命令          | C-g                      |
+| 重新执行minibuffer中最近的命令 | C-x <Esc> <Esc>          |
+| minibuffer历史命令列表         | M-x list-command-history |
+| 切换buffer                     | C-x b                    |
+| 显示已打开buffer列表           | C-x C-b                  |
+| 关闭当前buffer                 | C-x k                    |
+| 关闭emacs                      | C-x C-c                  |
 
 * 窗口
 {% alert danger %}需开启winner-mode和window-numbering-mode{% endalert %}
@@ -183,7 +185,8 @@
 | 在所有info中搜索指令                | M-x info-apropos |
 
 * org-mode
-=版本>=8.3.4测试通过=
+{% label org-mode版本=8.3.4测试通过 success %}
+
 
 ** 基础
 
@@ -209,3 +212,4 @@
 | 编辑当前单元格           | C-c `                       |
 | 表格重新排列             | C-c C-c                     |
 | 表格排序                 | M-x org-table-sort-lines    |
+|                          |                             |
