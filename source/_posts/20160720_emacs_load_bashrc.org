@@ -1,0 +1,92 @@
+#+TITLE: emacs中加载.bashrc配置文件
+#+DATE: <2016-07-20 16:42:43>
+#+TAGS:emacs,shell
+#+LAYOUT:post
+#+CATEGORIES:emacs
+#+OPTIONS: toc:nil ^:{}
+#+STARTUP: indent align
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei Mono}
+#+BIND: org-html-postamble "<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %a - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>"
+
+* 前言
+在emacs的日常使用中，难免会调用shell的一些指令来帮助获取系统底层的信息。
+我目前使用的是ubuntu自带bash shell，因此平时常用的一些配置都放在~/.bashrc文件中，主要是环境变量和alias；
+但是最近在使用nvm过程中发现emacs无法读取.bashrc中的配置，因此研究了一下如何让emacs加载.bashrc中的配置。
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+
+<<four-modes>>
+* interactive, non-interactive, login, non-login 
+熟悉LINUX系统的应该都知道，上面几个是shell的不同打开模式，决定了bash如何加载相应的配置文件，包括加载文件的位置和顺序。
++ =login shell= 和 =non-login shell=
+现在带图形界面的linux发行版都是默认启动 =non-login shell= ，例如ubuntu, centos with KDE， =login shell= 一般只有在远程运维的时候才会使用。\\
+
+{% alert warning %}ubuntu下启动 =login shell= 的快捷键是 =ctrl+alt+F1~F6= ，返回 =non-login shell= 
+的快捷键是 =ctrl+alt+F7= {% endalert %}
+
++ 如果是 =interactive login shell= 那么加载顺序是这样的：
+#+begin_src shell
+/etc/profile ->  ~/.bash_profile -> ~/.bash_login -> ~/.profile
+#+end_src
++ 如果是 =interactive non-login shell= 那么只会读取~/.bashrc。
+因此，为了能够让bash读取统一配置文件，可以在 =non-login=
+模式执行的配置文件中编写代码来“呼叫”.bashrc。例如，ubuntu系统中就在.profile文件中默认生成了下述代码：<<profile>>
+#+begin_src bash
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+	. "$HOME/.bashrc"
+    fi
+fi
+#+end_src
+这样就可以在 =non-login= 模式下也加载.bashrc，减少了冗余的配置代码。
++ 如果是 =non-interactive shell= 模式，那么bash会首先搜索环境变量BASH_ENV，因此可以在这里编写“呼叫”.bashrc的代码。
+关于interactive, non-interactive, login, non-login的详细内容参考[[https://www.gnu.org/software/bash/manual/html_node/Bash-Startup-Files.html][官方文档]]。
+
+* emacs中的bash shell
+emacs中有两种情况会使用到bash shell，一种是通过 =M-shell= 或者 =M-term= 使用；另一种是通过 =shell-command= 或者 =async-shell-command= 命令使用，这两种方式都是通过emacs的 =call-process= 启动一个子进程来运行bash shell。\\
+对于第一种情况，实际上是在emacs中开启 =interactive shell= 模式，因此按照[[four-modes][linux]]的加载规则，会自动加载.bashrc，所以这种情况下使用的配置会和外部Terminal使用的配置完全一样，
+不用担心不会加载.bashrc的问题。\\
+但是第二种情况就比较麻烦，因为emacs中 =shell-command= 或者 =async-shell-command= 调用的bash默认参数是 =-c= ，所以实际上是在 =non-interactive shell= 模式下工作，并不会直接加载.bashrc。按照[[profile][前面]]说明的规则，需要定义BASH_ENV来调用~/.bashrc，
+然后通过“呼叫”代码来调用.bashrc；但是需要注意的是.[[profile][这里]]第5行的.命令(又名source命令)只对当前进程产生影响，并不影响子进程，像
+=shell-command= 或者 =async-shell-command= 都属于通过emacs进程内部调用的命令，所以这时bash是一个子进程, =​​. "$HOME/.bashrc"​=
+这条语句根本不起作用，如果感兴趣可以自行测试一下。\\
+其实，要解决上述问题还是比较容易的，但首先要搞清楚emacs调用bash的机制。按照[[https://www.gnu.org/software/emacs/manual/html_node/emacs/Environment.html][官方文档]] ，需要明确的是 =emacs会自动继承父进程的环境变量=，
+也就是说父进程如果加载了.bashrc，那么子继承可以继承里面的配置，因此启动emacs的方式很关键。我总结了一下有以下几种方案可以
+正常加载.bashrc。
+
+* 解决方案
++ [[http://stackoverflow.com/questions/12224909/is-there-a-way-to-get-my-emacs-to-recognize-my-bash-aliases-and-custom-functions][网上]] 提出的一种解决方法，就是在emacs配置文件中修改bash的启动参数：
+#+begin_src lisp
+(setq shell-file-name "bash")
+(setq shell-command-switch "-ic")
+#+end_src
+这样可以解决无法加载.bashrc的问题，但是有一个副作用，就是当使用 =shell-command= 运行shell语句的时候会出现如下警告：<<warning>>
+#+begin_src bash 
+bash: cannot set terminal process group (-1): Invalid argument
+bash: no job control in this shell
+#+end_src
+这是因为 =shell-command= 执行时并没有在终端进程中，无法实现 =interactive shell= ，当然就出现警告了，但是.bashrc配置还是可以正常加载。
++ Terminal中启动 
+但其实如果是在Terminal里面直接启动emacs，那么就可以直接继承Terminal的配置，也就直接加载.bashrc了，这种方案最简单!
++ 外部bash命令启动 
+但是我相信应该很少有人直接在Terminal里面启动程序吧，每次都要敲命令多麻烦啊，特别是有时候还会调用一些
+前置的命令或者某些参数什么的。因此，常规启动的方式应该是写个sh文件，通过执行sh文件来启动，这样可以快捷的启动emacs。例如，我安装的是英文系统，为了能够在emacs中使用外部的中文输入法，所以加了参数 ~LC_CTYPE='zh_CN.UTF-8'​~
+在emacs前面，然后把脚本放在emacsX.sh文件，然后用 ~bash~ 命令执行 这个sh文件的命令，并且如果在ubuntu系统中还可以在startup application中将上述语句绑定到一组快捷键上，这样就不用每次都在Terminal中敲一串命令。\\
+这种启动方式的父进程就不是Terminal了，所以我们需要在外部设置bash的启动参数为 ~-i~ ，以 =interactive shell= 模式启动，这样就能通过继承
+=interactive shell= 模式来加载.bashrc，而且这时[[warning][警告信息]]是不会出现在emacs里面的，
+因为这时emacs只是bash的子进程，内部调用 =shell-command= 仍然是 =non-interactive shell= 。\\
+同样，可以把这句脚本加到startup application里面，目前没有发现任何副作用，大功告成！
+#+begin_src bash
+bash -i /path/to/emacsX.sh
+#+end_src
+
+
+
+
+
+

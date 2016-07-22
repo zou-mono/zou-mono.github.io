@@ -87,6 +87,7 @@
  | 复制                     | C-c          |
  | 粘贴                     | C-v          |
  | 撤销                     | C-z          |
+ | 重做                     | C-z C-z/C-g C-_ |
  | 删除光标所在字符         | DEL          |
  | 删除从光标至行尾所有字符 | C-k          |
  | 设置开始标记             | C-<SPC>或C-@ |
@@ -187,7 +188,6 @@
 * org-mode
 {% label org-mode版本=8.3.4测试通过 success %}
 
-
 ** 基础
 
 | 快捷键                  | 功能      |
@@ -208,8 +208,8 @@
 | 在当前行前插入一行       | M-x org-table-insert-row    |
 | 移动到下一行，或新建一行 | C-m                         |
 | 将当前行往上/下移动      | M-<up>/M-<down>             |
-| 将当前行往左/右移动      | M-<left>/M-<right>          |
+| 将当前行往左/右移动       | M-<left>/M-<right>          |
 | 编辑当前单元格           | C-c `                       |
 | 表格重新排列             | C-c C-c                     |
 | 表格排序                 | M-x org-table-sort-lines    |
-|                          |                             |
+                                                       

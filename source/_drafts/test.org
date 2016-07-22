@@ -1,0 +1,30 @@
+#+TITLE: test
+#+DATE: <2016-07-21 19:26:19>
+#+TAGS:
+#+LAYOUT:post
+#+CATEGORIES:
+#+OPTIONS: toc:nil ^:{}
+#+STARTUP: indent align
+#+LATEX_HEADER: \usepackage{xeCJK}
+#+LATEX_HEADER: \setCJKmainfont{WenQuanYi Micro Hei Mono}
+#+BIND: org-html-postamble "<div style='font-size: 14px;padding: 5px;line-height: 20px;border: 1px solid;'> Copyright (c) 2016-2020 %a - Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c</div>"
+
+=​"$HOME/.bashrc"​=
+"$HOME/.bashrc=
+
+
+我们=."$HOme/.bashrc"=
+
+我们=2=2=我们 wwww
+.=2=2=. wwww
+"=2=2=" wwww
+
+{% textcolor danger %}
+Donec ullamcorper nulla non metus auctor fringilla.
+{% endtextcolor %}
+
+@@html:<font color = "red">@@BOLD RED@@html:</font>@@
+
+="我们"=
+=women=
+我们=emacs= wee

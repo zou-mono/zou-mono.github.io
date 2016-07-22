@@ -40,8 +40,9 @@ relative_link: false
 future: true
 highlight:
   enable: true
+  number: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
 
 # Category & Tag
@@ -86,6 +87,7 @@ avatar: https://avatars3.githubusercontent.com/u/7379612?v=3&amp;s=400
 # org-mode
 org:
   emacs: '/usr/local/bin/emacs'
+  emacs_init: '~/.emacs-min/init.el'
 
 # Hexo-all-minifier
 html_minifier:
